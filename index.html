@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Little Data API - Data Demo</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    
+    <div class="container">
+
+
+        <!-- data -->
+        <div id="dataDialog" class="dialog">
+            <h3 class="tasks">Tasks <div id="loader" class="loader" style="visibility: hidden"></div></h3>
+            <div class="dataItem">
+                <div class="dataContainer"><input type="text" name="newTask" id="newTask"></div>
+                <div><button onclick="addTask()">add task</button></div>
+                <div>&nbsp;</div>
+            </div>
+            <div id="dataOutput" class="dataOutput"></div>
+            
+            
+        </div>
+
+
+
+        <div id="loginDialog" class="dialog">
+
+            <div>
+                <div>littledataapi.com</div>
+                <h3>Login <div id="loader" class="loader" style="visibility: hidden"></div>
+                </h3>
+                <i class="desc">Get an authentication token</i>
+            </div>
+
+            <label>Username:
+                <input type="text" id="username" placeholder="must be a valid email address" />
+            </label>
+
+            <label>Password:
+                <input type="password" id="password" />
+            </label>
+
+            <label>Expire (in days):
+                <input type="number" min="1" value="1" id="expire" />
+            </label>
+
+            <div>
+                <button type="button" onclick="authenticate()">Login</button>
+            </div>
+
+          
+
+        </div>
+    </div>
+
+
+
+</body>
+
+<script src="/js/index.js"></script>
+
+</html>
