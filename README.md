@@ -1,1 +1,1 @@
-A small web application to demonstrate reading, adding and deleting data using Little Data API.
+A small web application to demonstrate reading, adding, updating and deleting data using Little Data API.
