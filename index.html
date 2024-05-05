@@ -23,13 +23,13 @@
 
         <!-- data -->
         <div id="dataDialog" class="dialog" style="display: none">
-            <h3 class="tasks">Tasks <div id="loader" class="loader" style="visibility: hidden"></div></h3>
-            <div class="dataItem">
+            <h3 class="tasks ">Tasks <div id="loader" class="loader" style="visibility: hidden"></div></h3>
+            <div class="dataItem my-3">
                 <div class="dataContainer"><input type="text" name="newTask" id="newTask"></div>
                 <div><button onclick="addTask()">add task</button></div>
                 <div>&nbsp;</div>
             </div>
-            <div id="dataOutput" class="dataOutput"></div>
+            <div id="dataOutput" class="dataOutput my-3"></div>
             
             
         </div>
@@ -45,21 +45,22 @@
                 <i class="desc">Get an authentication token</i>
             </div>
 
-            <label>Username:
+            <label class="my-3">Username:
                 <input type="text" id="username" placeholder="must be a valid email address" />
             </label>
 
-            <label>Password:
+            <label class="my-3">Password:
                 <input type="password" id="password" />
             </label>
 
-            <label>Expire (in days):
+            <label class="my-3">Expire (in days):
                 <input type="number" min="1" value="1" id="expire" />
             </label>
 
-            <div>
+            <div class="my-3">
                 <button type="button" onclick="authenticate()">Login</button>
             </div>
+            <div class="my-3">If you haven't registered yet, see   Endpoints and Code Samples at <a href="https://littledataapi.com/" target="_blank">https://littledataapi.com/</a></div>
 
           
 
