@@ -1,6 +1,18 @@
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 18px;
+    background-color: rgb(203, 203, 203);
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top a{
+    color: rgb(0, 95, 114);
+    font-size: 1.3rem;
 }
 
 .container {
@@ -8,8 +20,7 @@ body {
     height: 100vh;
     padding: 1rem;
     display: flex;
-    align-items: center;
-    background-color: lightgray;
+    align-items:start;
 }
 
 .dialog {
@@ -130,4 +141,13 @@ th {
 
 .dataOutput > div {
     margin-top:0.5rem;
+}
+
+.max-w-36 {
+    max-width: 36rem;
+}
+
+.my-3{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }

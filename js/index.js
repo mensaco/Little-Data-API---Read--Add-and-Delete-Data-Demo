@@ -101,6 +101,23 @@ const addTask = () => {
 
 }
 
+
+const updateTask = (id) => {
+    const value = el(`v_${id}`).value
+    showLoader()
+    fetch(`https://littledataapi.com/api/LittleData/UpdateStringById?id=${id}&value=${value}`, {
+        method: 'PUT',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + localStorage.getItem('_lda_token')
+        }
+    })
+        .then(handleResponse)
+        .then(handleJson)
+        .finally(() => hideLoader())
+}
+
 const deleteTask = (id) => {
     showLoader()
     fetch(`https://littledataapi.com/api/LittleData/DeleteStringById?id=${id}`, {
@@ -114,15 +131,13 @@ const deleteTask = (id) => {
         .then(handleResponse)
         .then(handleJson)
         .finally(() => hideLoader())
-
-
 }
 
 const redrawTasks = () => {
     const tasksHtml = Tasks.map(t => `
     <div class="dataItem">
-        <div class="dataContainer"><input type="text" name="${t.value}" value="${t.value}"></div>
-        <div><button onclick="deleteTask('${t.id}')">delete task</button></div>
+        <div class="dataContainer"><input id="v_${t.id}" type="text" name="${t.value}" value="${t.value}"></div>
+        <div><button style="color: red; padding: 0.5rem" onclick="deleteTask('${t.id}')">delete</button> <button style="color: green; padding: 0.5rem" onclick="updateTask('${t.id}')">update</button></div>
     </div>
             `).join('')
 

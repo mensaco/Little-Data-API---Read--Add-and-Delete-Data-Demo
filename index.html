@@ -7,12 +7,22 @@
     <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
+    <div class="top">
+        <h3>A minimal CRUD Demo for </h3>
+        <h4><a href="https://littledataapi.com" target="_blank">https://littledataapi.com</a> </h4>
+        <p class="max-w-36 my-3">
+            This is a plain old HTML + JS + CSS webpage that connects to different API Endpoints to change, retrieve, update and delete a small list of tasks. 
+        </p>
+        <p class="max-w-36 my-3">
+            You can find the code on <a href="https://github.com/mensaco/Little-Data-API-CRUD-Demo" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </p>
+    </div>
     
     <div class="container">
 
 
         <!-- data -->
-        <div id="dataDialog" class="dialog">
+        <div id="dataDialog" class="dialog" style="display: none">
             <h3 class="tasks">Tasks <div id="loader" class="loader" style="visibility: hidden"></div></h3>
             <div class="dataItem">
                 <div class="dataContainer"><input type="text" name="newTask" id="newTask"></div>
@@ -26,7 +36,7 @@
 
 
 
-        <div id="loginDialog" class="dialog">
+        <div id="loginDialog" class="dialog" style="display:none">
 
             <div>
                 <div>littledataapi.com</div>
