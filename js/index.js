@@ -37,6 +37,7 @@ const hideLogin = () => {
     el("dataDialog").style.display = "block"
 }
 
+
 const authenticate = function () {
     showLoader()
     fetch('https://littledataapi.com/Users/Authenticate', {
@@ -55,7 +56,7 @@ const authenticate = function () {
         .then(json => {
 
             if (json.succeeded) {
-                localStorage.setItem("_lda_token", json.token)
+                localStorage.setItem("_lda_token", json.message)
                 hideLogin()
                 getTasks()
             }
