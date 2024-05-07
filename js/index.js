@@ -16,7 +16,7 @@ const  handleResponse  = (response) => {
 
 const handleJson = json => {
     
-    if (json.success) {
+    if (json.succeeded) {
         Tasks = json.data
         redrawTasks()
     }
